@@ -1,0 +1,278 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+/* 초기화 */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* header */
+header{
+    width: 100%;
+    /* border-bottom: 1px solid #DDD; */
+    background-color: FFF;   
+}
+header .inner{
+    width: 1180px;
+    height: 120px;
+    margin: 0px auto;
+    position: relative;
+}
+header .inner h1{
+    position: absolute;
+    left: 0px;
+    bottom: -15px;
+}
+header .inner h1 a{
+    font: bold 24px/1 "Cairo";
+    color: #FFF;
+}
+header .inner .util{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+header .inner .util li{
+    float: left;
+}
+header .inner .util li a{
+    display: block;
+    font: 12px/1 "Cairo";
+    color:#999;
+    padding: 10px 10px;
+}
+
+header .inner .util li a:hover{
+    /* background: rgb(223, 157, 167); */
+    background: #1c2d25;
+    color: #fff;
+}
+
+header .inner #gnb{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+header .inner #gnb li{
+    float: left;
+}
+header .inner #gnb li a{
+    display: block;
+    font: bold 15px/1 "Cairo";
+    color: #555;
+    padding: 20px 40px;
+    transition: all 0.5s;
+}
+header .inner #gnb li a:hover{
+    /* background: rgb(223, 157, 167); */
+    background: #1c2d25;
+    color: #fff;
+}
+
+/* visual */
+figure{
+    width: 100%;
+    height: calc(100vh - 120px);
+    background: #000;
+    position: relative;
+    overflow: hidden;
+    padding-top: 250px;
+}
+figure img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-size: cover;
+}
+
+figure .inner{
+    width: 1180px;
+    margin: 0px auto;
+    position: relative;
+}
+figure .inner h1{
+    font: normal 120px/1 "Cairo";
+    color:#fff;
+    margin-bottom: 20px;
+}
+figure .inner p{
+    font: 24px/1.4 "arial";
+    color: #fff;
+    margin-bottom: 60px;
+}
+figure .inner a{
+    display: block;
+    width: 400px;
+    height: 30px;
+    /* border: 1px solid #fff; */
+    background-color: #FFF;
+    font: bold 20px/30px "Cairo";
+    color: #111;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+figure .inner a:hover{
+    background: #1c2d25;
+    color: #FFF;
+}
+
+/* news */
+section{
+    width: 100%;
+    padding: 200px 0px;
+}
+section .inner{
+    width: 1180px;
+    margin: 0px auto;
+}
+section .inner h1{
+    font:bold 45px/1 "Cairo";
+    color: #555;
+    text-align: center;
+    margin-bottom: 50px;
+}
+section .inner .wrap{
+    width: 100%;
+}
+
+/* float 속성 해제 */
+section .inner .wrap::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section .inner .wrap article{
+    width: 280px;
+    float: left;
+    margin-right: 20px;
+}
+section .inner .wrap article:last-child{
+    margin-right: 0px;
+}
+section .inner .wrap article h2{
+    margin-bottom: 10px;
+    text-align: center;
+}
+section .inner .wrap article h2 a{
+    font:bold 16px/1 "Cairo";
+    color:#555;
+}
+section .inner .wrap article p{
+    font:14px/1.4 "Cairo";
+    color: #777;
+    text-align: center;
+}
+section .inner .wrap article .pic{
+    width: 100%;
+    height: 120px;
+    background: #333;
+    margin-bottom: 15px;
+    /* position: relative;
+    overflow: hidden; */
+}
+ 
+ section .inner .wrap article .pic img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    cursor: pointer;
+    /* background-size: cover; */
+} 
+
+section .inner .wrap article .pic img:hover{
+    opacity: 0.5;
+} 
+section .inner .wrap article .pic p{
+    font-size: 25px;
+    transition: all 0.5s;
+}
+section .inner .wrap article .pic p:hover{
+    color: #1c2d25;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    /* background: rgb(223, 157, 167); */
+    background: #1c2d25;
+    padding:100px 0px;
+    /* border-top: 1px solid #888; */
+}
+footer .inner{
+    width: 1180px;
+    margin: 0px auto;
+}
+footer .inner .upper{
+    width: 100%;
+    border-bottom: 1px solid #777;
+    padding-bottom: 20px;
+}
+footer .inner .upper::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+footer .inner .upper h1 a{
+    float: left;
+    font:bold 24px/1 "Cairo";
+    color: #fff;
+}
+footer .inner .upper ul{
+    float: right;
+}
+footer .inner .upper ul li{
+    float: left;
+    margin-left: 20px;
+}
+footer .inner .upper ul li a{
+    font: bold 14px/1 "Cairo";
+    color:#fff;
+    transition: all 0.5s;
+}
+
+footer .inner .upper ul li a:hover{
+    color: #FFF;
+}
+
+footer .inner .lower{
+    width: 100%;
+    padding-top: 20px;
+}
+footer .inner .lower address{
+    width: 100%;
+    font:12px/1.3 "Cairo";
+    color:#fff;
+    margin-bottom: 20px;
+}
+
+footer .inner .lower p{
+    width: 100%;
+    font:12px/1 "Cairo";
+    color: #fff;
+}
+footer .inner .upper ul li i{
+    color: #666;
+    font-size: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+footer .inner .upper ul li i:hover{
+    opacity: 0.8;
+    transform: scale(1.4);
+    color: #FFF;
+}
